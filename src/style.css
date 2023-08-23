@@ -10,22 +10,34 @@ body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
   font-size: 1rem;
+  color: #1c689b
 }
 
 
+.mainContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #5180FF;
+}
+
 .container {
+  border-radius: .5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background-color: rgb(255, 255, 255);
+  height: 10rem;
+  background-color: white;
+  width: 25rem;
   text-align: center;
+  box-shadow: 0 0 1rem 0 rgb(126, 125, 125)
 }
 
 .btn {
   border: none;
-  background-color: #2962FF;
+  background-color: #26B580;
   width: 4rem;
   height: 1.5rem;
   border-radius: .3rem;
@@ -52,4 +64,11 @@ body {
 .btnMin {
   font-size: 2.5rem;
   padding-bottom: .2rem;
+  background-color: #D13737;
+}
+
+.info {
+  margin: 1rem 0;
+  font-size: 1.5rem;
+  /* font-weight: 400; */
 }
