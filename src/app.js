@@ -1,5 +1,6 @@
-import "./styles.css";
+import "./style.css";
 import { useState } from "react";
+import moment from "moment";
 
 export default function App() {
   const [step, setStep] = useState(0);
@@ -7,6 +8,7 @@ export default function App() {
   const [day, setDay] = useState(0);
 
   const currentDate = new Date();
+  console.log(moment(currentDate).format("MMMM Do YYYY, h:mm:ss a"));
   currentDate.setDate(currentDate.getDate() + day);
   const dayList = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   const getMonths = [
@@ -31,15 +33,27 @@ export default function App() {
 
   return (
     <div className="App container">
-      <div>
-        <button onClick={() => setStep(step + 1)}>+</button>
-        <span>Step: {step}</span>
-        <button onClick={step > 1 ? () => setStep(step - 1) : null}>-</button>
+      <div className="mainCont">
+        <button
+          className="btn btnMin"
+          onClick={step > 1 ? () => setStep(step - 1) : null}
+        >
+          -
+        </button>
+        <span className="data">Step: {step}</span>
+        <button className="btn" onClick={() => setStep(step + 1)}>
+          <p>+</p>
+        </button>
       </div>
-      <div>
-        <button onClick={() => setDay(day + step)}>+</button>
-        <span>Days: {day}</span>
-        <button onClick={() => setDay(day - step)}>-</button>
+
+      <div className="mainCont">
+        <button className="btn btnMin" onClick={() => setDay(day - step)}>
+          <span>-</span>
+        </button>
+        <span className="data">Days: {day}</span>
+        <button className="btn" onClick={() => setDay(day + step)}>
+          <span>+</span>
+        </button>
       </div>
       <div>
         <h3>
