@@ -26,3 +26,6 @@ This React app displays a step counter and a day counter. You can increase or de
 - Click the "+" and "-" buttons to adjust the step value.
 - Click the "+", "-", and "Days" buttons to adjust the day value.
 - The app will display the calculated date based on the selected day count from the current date.
+
+  
+![Date count Preview](https://github.com/Jegan-kanthasamy/date-count-calculator/assets/116385792/6ef44354-3399-436f-8f6a-4fe825db09bc)
